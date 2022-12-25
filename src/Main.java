@@ -73,13 +73,13 @@ public class Main {
 
 
     public static String getDay(int km) {
-
+        int dayD = 1;
         if (km < 20) {
-            return "потребуется 1 день";
+            return "потребуется " + dayD + " день";
         } else if (km < 60 && km >= 20) {
-            return "потребуется 2 дня";
+            return "потребуется " + (dayD + dayD) + " дня";
         } else if (km < 100 && km >= 60) {
-            return "потребуется 3 дня";
+            return "потребуется " + (dayD + dayD + dayD ) + " дня";
         } else return "Извините, до Вас слишком далеко";
 
     }
