@@ -1,7 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         task1();
+        System.out.println("Задание 2");
         task2(0, 2020);
+        task2(1, 2022);
+        task2(0, 2010);
+        task2(1, 2009);
+
     }
 
 
@@ -31,12 +36,8 @@ public class Main {
     }
 
     public static void task2(int os, int years) {
-        System.out.println("Задание 2");
-
         String yearsOS = printLite(years);
-
         String version = printOS(os);
-
         System.out.println(yearsOS + version);
     }
 
@@ -44,28 +45,24 @@ public class Main {
     public static String printOS(int os) {
         String name = "для IOS";
         String name2 = "для Android";
-        if (os == 0)
-        {
-            return name; }
-         else {
-            return name2; }
+        if (os == 0) {
+            return name;
+        } else {
+            return name2;
+        }
 
     }
 
 
     public static String printLite(int years) {
-
         if (years <= 2015) {
             return "Нужна облегченная версия ";
-        }
-        else {
+        } else {
             return "Нужна стандартная версия ";
+        }
+
 
     }
-
-
-
-}
 
 
 }
