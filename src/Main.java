@@ -6,6 +6,11 @@ public class Main {
         task2(1, 2022);
         task2(0, 2010);
         task2(1, 2009);
+        System.out.println("Задание 3");
+        task3(1);
+        task3(22);
+        task3(70);
+        task3(170);
 
     }
 
@@ -36,23 +41,20 @@ public class Main {
     }
 
     public static void task2(int os, int years) {
-        String yearsOS = printLite(years);
         String version = printOS(os);
+        String yearsOS = printLite(years);
         System.out.println(yearsOS + version);
     }
 
-
-    public static String printOS(int os) {
+    public static String printOS(int oss) {
         String name = "для IOS";
         String name2 = "для Android";
-        if (os == 0) {
+        if (oss == 0) {
             return name;
         } else {
             return name2;
         }
-
     }
-
 
     public static String printLite(int years) {
         if (years <= 2015) {
@@ -64,7 +66,23 @@ public class Main {
 
     }
 
+    public static void task3(int km) {
+        String days = getDay(km);
+        System.out.println(days);
+    }
 
+
+    public static String getDay(int km) {
+
+        if (km < 20) {
+            return "потребуется 1 день";
+        } else if (km < 60 && km >= 20) {
+            return "потребуется 2 дня";
+        } else if (km < 100 && km >= 60) {
+            return "потребуется 3 дня";
+        } else return "Извините, до Вас слишком далеко";
+
+    }
 }
 
 
